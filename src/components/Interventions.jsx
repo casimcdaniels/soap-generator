@@ -63,7 +63,7 @@ function Interventions({ interventions, onChange }) {
               onClick={handleAdd}
               disabled={!newTime || !newText.trim()}
             >
-              Add
+              <i className="fas fa-plus"></i> Add
             </button>
           </div>
         </div>
@@ -81,7 +81,7 @@ function Interventions({ interventions, onChange }) {
                 onClick={() => handleRemove(index)}
                 aria-label="Remove intervention"
               >
-                ×
+                <i className="fas fa-times"></i>
               </button>
             </div>
           ))}

@@ -1,7 +1,7 @@
 function Assessment({ formData, onChange }) {
   return (
     <div className="form-group">
-      <h2>Assessment/Impression</h2>
+        <h2><i className="fas fa-diagnoses"></i> Assessment/Impression</h2>
       <div className="form-field">
         <label htmlFor="assessment">Assessment/Impression</label>
         <textarea

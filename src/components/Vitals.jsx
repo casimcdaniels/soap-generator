@@ -180,7 +180,7 @@ function Vitals({ vitals, onChange }) {
               onClick={handleAdd}
               disabled={!newTime || !hasVitalData}
             >
-              Add Vitals
+              <i className="fas fa-plus"></i> Add Vitals
             </button>
           </div>
         </div>
@@ -198,7 +198,7 @@ function Vitals({ vitals, onChange }) {
                 onClick={() => handleRemove(index)}
                 aria-label="Remove vitals"
               >
-                ×
+                <i className="fas fa-times"></i>
               </button>
             </div>
           ))}

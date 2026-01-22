@@ -7,7 +7,7 @@ function Objective({ formData, onChange }) {
   return (
     <>
       <div className="form-group">
-        <h2>Physical Exam</h2>
+        <h2><i className="fas fa-user-md"></i> Physical Exam</h2>
         <div className="form-field">
           <label htmlFor="loc">LOC</label>
           <input
@@ -145,17 +145,17 @@ function Objective({ formData, onChange }) {
       </div>
 
       <div className="form-group">
-        <h2>Timeline</h2>
+        <h2><i className="fas fa-clock"></i> Timeline</h2>
         <div className="timeline-section">
           <div className="timeline-subsection">
-            <h3>Vitals</h3>
+            <h3><i className="fas fa-heartbeat"></i> Vitals</h3>
             <Vitals
               vitals={formData.vitals}
               onChange={(value) => onChange('vitals', value)}
             />
           </div>
           <div className="timeline-subsection">
-            <h3>Interventions</h3>
+            <h3><i className="fas fa-procedures"></i> Interventions</h3>
             <Interventions
               interventions={formData.interventions}
               onChange={(value) => onChange('interventions', value)}

@@ -3,7 +3,7 @@ import TimeInput from './TimeInput'
 function PatientInfo({ formData, onChange }) {
   return (
     <div className="form-group">
-      <h2>Patient Information</h2>
+        <h2><i className="fas fa-id-card"></i> Patient Information</h2>
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="encounterTime">Time (24-hour, HH:MM)</label>

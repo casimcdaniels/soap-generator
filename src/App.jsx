@@ -175,26 +175,26 @@ function App() {
   }
 
   const tabs = [
-    { id: 'shift', label: 'Shift Info', color: '#6c757d' },
-    { id: 'patient', label: 'Patient Info', color: '#003d82' },
-    { id: 'subjective', label: 'Subjective', color: '#0066cc' },
-    { id: 'objective', label: 'Objective', color: '#28a745' },
-    { id: 'assessment', label: 'Assessment', color: '#ff9800' },
-    { id: 'plan', label: 'Plan', color: '#dc3545' }
+    { id: 'shift', label: 'Shift Info', color: '#6c757d', icon: 'fa-calendar-alt' },
+    { id: 'patient', label: 'Patient Info', color: '#003d82', icon: 'fa-user' },
+    { id: 'subjective', label: 'Subjective', color: '#0066cc', icon: 'fa-comment-medical' },
+    { id: 'objective', label: 'Objective', color: '#28a745', icon: 'fa-stethoscope' },
+    { id: 'assessment', label: 'Assessment', color: '#ff9800', icon: 'fa-clipboard-check' },
+    { id: 'plan', label: 'Plan', color: '#dc3545', icon: 'fa-tasks' }
   ]
 
   return (
     <div className="container">
       <header>
         <div className="header-content">
-          <h1>SOAP Report Generator</h1>
+          <h1><i className="fas fa-file-medical"></i> SOAP Report Generator</h1>
           <button 
             type="button" 
             className="btn btn-new-patient" 
             onClick={handleClear}
             title="Clear all fields and start a new patient"
           >
-            New Patient
+            <i className="fas fa-user-plus"></i> New Patient
           </button>
         </div>
       </header>
@@ -213,7 +213,7 @@ function App() {
                   color: activeTab === tab.id ? 'white' : '#666'
                 }}
               >
-                {tab.label}
+                <i className={`fas ${tab.icon}`}></i> {tab.label}
               </button>
             ))}
           </div>
@@ -241,7 +241,7 @@ function App() {
 
           <div className="form-actions">
             <button type="button" className="btn btn-secondary" onClick={handleClear}>
-              Clear Form
+              <i className="fas fa-eraser"></i> Clear Form
             </button>
           </div>
         </div>

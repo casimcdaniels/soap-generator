@@ -1,7 +1,7 @@
 function Plan({ formData, onChange }) {
   return (
     <div className="form-group">
-      <h2>Plan/Disposition</h2>
+        <h2><i className="fas fa-route"></i> Plan/Disposition</h2>
       <div className="form-field">
         <label htmlFor="plan">Plan/Disposition</label>
         <textarea

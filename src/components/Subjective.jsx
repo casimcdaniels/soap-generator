@@ -2,7 +2,7 @@ function Subjective({ formData, onChange }) {
   return (
     <>
       <div className="form-group">
-        <h2>SAMPLE History</h2>
+        <h2><i className="fas fa-history"></i> SAMPLE History</h2>
         <div className="form-field">
           <label htmlFor="symptoms">S - Signs & Symptoms</label>
           <textarea
@@ -66,7 +66,7 @@ function Subjective({ formData, onChange }) {
       </div>
 
       <div className="form-group">
-        <h2>OPQRST</h2>
+        <h2><i className="fas fa-question-circle"></i> OPQRST</h2>
         <div className="form-field">
           <label htmlFor="onset">O - Onset</label>
           <input
@@ -132,7 +132,7 @@ function Subjective({ formData, onChange }) {
       </div>
 
       <div className="form-group">
-        <h2>General Assessment</h2>
+        <h2><i className="fas fa-clipboard-list"></i> General Assessment</h2>
         <div className="form-field">
           <label htmlFor="generalAssessment">Patient Presentation</label>
           <textarea

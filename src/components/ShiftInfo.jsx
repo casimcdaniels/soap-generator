@@ -3,7 +3,7 @@ import TimeInput from './TimeInput'
 function ShiftInfo({ formData, onChange }) {
   return (
     <div className="form-group">
-      <h2>Shift Information</h2>
+        <h2><i className="fas fa-calendar-check"></i> Shift Information</h2>
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="shiftType">Shift Type</label>

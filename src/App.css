@@ -43,6 +43,14 @@ header h1 {
     font-weight: 700;
     flex: 1;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header h1 i {
+    font-size: 0.9em;
 }
 
 header p {
@@ -87,6 +95,14 @@ header p {
     border-bottom: 3px solid transparent;
     white-space: nowrap;
     min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.tab-button i {
+    font-size: 0.9em;
 }
 
 .tab-button:hover {
@@ -170,6 +186,13 @@ header p {
     margin-bottom: 8px;
     padding-bottom: 4px;
     border-bottom: 2px solid var(--section-color, #0066cc);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-group h2 i {
+    font-size: 0.9em;
 }
 
 .form-row {
@@ -385,7 +408,7 @@ header p {
     border-radius: 2px;
     width: 24px;
     height: 24px;
-    font-size: 1.2em;
+    font-size: 0.9em;
     line-height: 1;
     cursor: pointer;
     display: flex;
@@ -419,6 +442,13 @@ header p {
     margin-bottom: 4px;
     padding-bottom: 4px;
     border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timeline-subsection h3 i {
+    font-size: 0.9em;
 }
 
 .vitals-container {
@@ -509,6 +539,9 @@ header p {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .btn-primary {
@@ -558,6 +591,9 @@ header p {
     cursor: pointer;
     transition: all 0.3s ease;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .btn-new-patient:hover {
