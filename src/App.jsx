@@ -169,6 +169,14 @@ function App() {
     setReport(generatedReport)
   }, [formData])
 
+  // Reset scroll position when tab changes
+  useEffect(() => {
+    const tabContent = document.querySelector('.tab-content')
+    if (tabContent) {
+      tabContent.scrollTop = 0
+    }
+  }, [activeTab])
+
   const handleChange = (field, value) => {
     setFormData(prev => ({
       ...prev,
