@@ -84,7 +84,7 @@ function Vitals({ vitals, onChange }) {
                 id="vital-time"
                 value={newTime}
                 onChange={setNewTime}
-                placeholder="19:15"
+                placeholder="HH:MM"
               />
             </div>
             <div className="form-field">
@@ -95,7 +95,6 @@ function Vitals({ vitals, onChange }) {
                 value={newPulse}
                 onChange={(e) => setNewPulse(e.target.value)}
                 min="0"
-                placeholder="80"
               />
             </div>
             <div className="form-field">
@@ -106,7 +105,6 @@ function Vitals({ vitals, onChange }) {
                 value={newRespRate}
                 onChange={(e) => setNewRespRate(e.target.value)}
                 min="0"
-                placeholder="16"
               />
             </div>
             <div className="form-field">
@@ -118,7 +116,6 @@ function Vitals({ vitals, onChange }) {
                   value={newBpSystolic}
                   onChange={(e) => setNewBpSystolic(e.target.value)}
                   min="0"
-                  placeholder="120"
                   style={{ flex: 1, minWidth: '60px', maxWidth: '80px' }}
                 />
                 <span style={{ color: '#666' }}>/</span>
@@ -128,7 +125,6 @@ function Vitals({ vitals, onChange }) {
                   value={newBpDiastolic}
                   onChange={(e) => setNewBpDiastolic(e.target.value)}
                   min="0"
-                  placeholder="80"
                   style={{ flex: 1, minWidth: '60px', maxWidth: '80px' }}
                 />
               </div>
@@ -142,7 +138,6 @@ function Vitals({ vitals, onChange }) {
                 onChange={(e) => setNewTemp(e.target.value)}
                 step="0.1"
                 min="0"
-                placeholder="98.6"
               />
             </div>
             <div className="form-field">
@@ -154,7 +149,6 @@ function Vitals({ vitals, onChange }) {
                 onChange={(e) => setNewSpo2(e.target.value)}
                 min="0"
                 max="100"
-                placeholder="98"
               />
             </div>
             <div className="form-field">
@@ -165,7 +159,6 @@ function Vitals({ vitals, onChange }) {
                 value={newEtco2}
                 onChange={(e) => setNewEtco2(e.target.value)}
                 min="0"
-                placeholder="40"
               />
             </div>
             <div className="form-field">
@@ -176,7 +169,6 @@ function Vitals({ vitals, onChange }) {
                 value={newGlucose}
                 onChange={(e) => setNewGlucose(e.target.value)}
                 min="0"
-                placeholder="110"
               />
             </div>
           </div>

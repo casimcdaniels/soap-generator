@@ -1,4 +1,4 @@
-function TimeInput({ id, value, onChange, required, placeholder = "19:15" }) {
+function TimeInput({ id, value, onChange, required, placeholder = "HH:MM" }) {
   const handleChange = (e) => {
     const inputValue = e.target.value
     // Allow only numbers and colon, format as HH:MM

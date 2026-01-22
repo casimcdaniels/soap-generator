@@ -55,7 +55,7 @@ function ShiftInfo({ formData, onChange }) {
           id="encounterTime"
           value={formData.encounterTime}
           onChange={(value) => onChange('encounterTime', value)}
-          placeholder="19:15"
+          placeholder="HH:MM"
           required
         />
       </div>

@@ -43,9 +43,9 @@ export function generateReport(formData) {
     // Format age display
     let ageDisplay = '';
     if (ageYears && ageMonths) {
-        ageDisplay = `${ageYears}yo, ${ageMonths}mo`;
+        ageDisplay = `${ageYears}y ${ageMonths}mo`;
     } else if (ageYears) {
-        ageDisplay = `${ageYears}yo`;
+        ageDisplay = `${ageYears}y`;
     } else if (ageMonths) {
         ageDisplay = `${ageMonths}mo`;
     }
