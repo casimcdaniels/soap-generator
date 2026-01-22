@@ -44,7 +44,7 @@ function PatientInfo({ formData, onChange }) {
             required
             className="patient-info-input patient-info-sex-select"
           >
-            <option value="">-</option>
+            <option value="">Select</option>
             <option value="M">M</option>
             <option value="F">F</option>
             <option value="Other">Other</option>
