@@ -59,7 +59,7 @@ const getDefaultFormData = () => ({
   temp: '',
   spo2: '',
   glucose: '',
-  interventions: '',
+  interventions: [],
   assessment: '',
   plan: ''
 })
@@ -76,6 +76,14 @@ function App() {
       const savedData = localStorage.getItem(STORAGE_KEY)
       if (savedData) {
         const parsed = JSON.parse(savedData)
+        // Migrate old interventions string to array format
+        if (parsed.interventions && typeof parsed.interventions === 'string') {
+          parsed.interventions = []
+        }
+        // Ensure interventions is an array
+        if (!Array.isArray(parsed.interventions)) {
+          parsed.interventions = []
+        }
         // Merge with defaults to handle any missing fields
         return { ...getDefaultFormData(), ...parsed }
       }

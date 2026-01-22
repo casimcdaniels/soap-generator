@@ -75,7 +75,7 @@ export function generateReport(formData) {
     const temp = formData.temp || '';
     const spo2 = formData.spo2 || '';
     const glucose = formData.glucose || '';
-    const interventions = formData.interventions || '';
+    const interventions = formData.interventions || [];
     const assessment = formData.assessment || '';
     const plan = formData.plan || '';
 
@@ -183,9 +183,11 @@ export function generateReport(formData) {
     }
     
     // Interventions
-    if (interventions) {
+    if (interventions && interventions.length > 0) {
         if (physicalExamParts.length > 0 || vitalsParts.length > 0) report += '\n\n';
-        report += interventions;
+        report += 'Timeline\n';
+        const interventionLines = interventions.map(int => `[${int.time}] - ${int.text}`).join('\n');
+        report += interventionLines;
     }
     
     report += '\n\n';

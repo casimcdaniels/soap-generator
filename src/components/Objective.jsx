@@ -1,5 +1,6 @@
 import TimeInput from './TimeInput'
 import GCSInput from './GCSInput'
+import Interventions from './Interventions'
 
 function Objective({ formData, onChange }) {
   return (
@@ -235,16 +236,10 @@ function Objective({ formData, onChange }) {
 
       <div className="form-group">
         <h2>Interventions & Timeline</h2>
-        <div className="form-field">
-          <label htmlFor="interventions">Interventions and Timeline</label>
-          <textarea
-            id="interventions"
-            value={formData.interventions}
-            onChange={(e) => onChange('interventions', e.target.value)}
-            rows="5"
-            placeholder="1915: initial vitals.&#10;1920: gave warm blanket for comfort&#10;1925: attending doc measured eye pressure at 40 mmhg"
-          />
-        </div>
+        <Interventions
+          interventions={formData.interventions}
+          onChange={(value) => onChange('interventions', value)}
+        />
       </div>
     </>
   )

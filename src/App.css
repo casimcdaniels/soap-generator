@@ -299,6 +299,98 @@ header p {
     text-align: center;
 }
 
+.interventions-container {
+    margin-top: 8px;
+}
+
+.interventions-form {
+    margin-bottom: 12px;
+}
+
+.interventions-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.interventions-time-field {
+    flex: 0 0 100px;
+    margin-bottom: 0;
+}
+
+.interventions-text-field {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.interventions-add-button {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+}
+
+.interventions-add-button .btn {
+    padding: 6px 14px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.interventions-add-button .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.interventions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.intervention-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 2px;
+}
+
+.intervention-time {
+    font-weight: 600;
+    color: #495057;
+    min-width: 60px;
+    font-size: 0.9em;
+}
+
+.intervention-text {
+    flex: 1;
+    color: #212529;
+    font-size: 0.9em;
+}
+
+.btn-remove {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+    font-size: 1.2em;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background 0.2s ease;
+    flex-shrink: 0;
+}
+
+.btn-remove:hover {
+    background: #c82333;
+}
+
 .form-actions {
     display: flex;
     gap: 8px;
