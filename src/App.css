@@ -244,7 +244,7 @@ header p {
 }
 
 .patient-info-field:has(input[type="number"][id="ageYears"]) {
-    max-width: 200px;
+    max-width: 300px;
 }
 
 .patient-info-sex-field {
@@ -277,7 +277,7 @@ header p {
 }
 
 .patient-info-age-field {
-    max-width: 200px;
+    max-width: 300px;
 }
 
 .patient-info-sex-field {

@@ -64,6 +64,34 @@ function PatientInfo({ formData, onChange }) {
                 fontWeight: '500'
               }}>Months</span>
             </div>
+            <div style={{ flex: 1, position: 'relative' }}>
+              <input
+                type="number"
+                id="ageDays"
+                value={formData.ageDays}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  if (value === '' || (parseInt(value) >= 0 && parseInt(value) <= 30)) {
+                    onChange('ageDays', value);
+                  }
+                }}
+                min="0"
+                max="30"
+                placeholder=""
+                className="patient-info-input"
+                style={{ paddingRight: '50px' }}
+              />
+              <span style={{
+                position: 'absolute',
+                right: '12px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '0.9rem',
+                color: '#666',
+                pointerEvents: 'none',
+                fontWeight: '500'
+              }}>Days</span>
+            </div>
           </div>
         </div>
         <div className="form-field patient-info-field patient-info-sex-field">

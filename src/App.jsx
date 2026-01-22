@@ -21,6 +21,7 @@ const getDefaultFormData = () => ({
   age: '',
   ageYears: '',
   ageMonths: '',
+  ageDays: '',
   weight: '',
   weightUnit: 'lbs',
   height: '',
@@ -205,6 +206,7 @@ function App() {
       } else if (activeTab === 'patient') {
         fieldsToClear.ageYears = ''
         fieldsToClear.ageMonths = ''
+        fieldsToClear.ageDays = ''
         fieldsToClear.weight = ''
         fieldsToClear.weightUnit = defaultData.weightUnit
         fieldsToClear.height = ''

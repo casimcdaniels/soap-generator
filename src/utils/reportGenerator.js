@@ -36,6 +36,7 @@ export function generateReport(formData) {
     const encounterTime = formatTime(formData.encounterTime);
     const ageYears = formData.ageYears || '';
     const ageMonths = formData.ageMonths || '';
+    const ageDays = formData.ageDays || '';
     const weight = formData.weight || '';
     const weightUnit = formData.weightUnit || 'lbs';
     const height = formData.height || '';
@@ -44,12 +45,13 @@ export function generateReport(formData) {
     
     // Format age display
     let ageDisplay = '';
-    if (ageYears && ageMonths) {
-        ageDisplay = `${ageYears}y ${ageMonths}mo`;
-    } else if (ageYears) {
-        ageDisplay = `${ageYears}y`;
-    } else if (ageMonths) {
-        ageDisplay = `${ageMonths}mo`;
+    const ageParts = [];
+    if (ageYears) ageParts.push(`${ageYears}y`);
+    if (ageMonths) ageParts.push(`${ageMonths}mo`);
+    if (ageDays) ageParts.push(`${ageDays}d`);
+    
+    if (ageParts.length > 0) {
+        ageDisplay = ageParts.join(' ');
     }
     
     // Format weight display with conversion (always show kg first, then lbs)
