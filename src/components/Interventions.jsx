@@ -42,7 +42,7 @@ function Interventions({ interventions, onChange }) {
               id="intervention-time"
               value={newTime}
               onChange={setNewTime}
-              placeholder="HH:MM"
+              placeholder="19:20"
             />
           </div>
           <div className="form-field interventions-text-field">
@@ -53,7 +53,7 @@ function Interventions({ interventions, onChange }) {
               value={newText}
               onChange={(e) => setNewText(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="e.g., initial vitals"
+              placeholder="e.g., C-spine precautions maintained, backboard applied, C-collar placed, O2 via nasal cannula at 2L/min"
             />
           </div>
           <div className="interventions-add-button">

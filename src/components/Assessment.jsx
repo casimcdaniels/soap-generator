@@ -9,7 +9,7 @@ function Assessment({ formData, onChange }) {
           value={formData.assessment}
           onChange={(e) => onChange('assessment', e.target.value)}
           rows="5"
-          placeholder="e.g., Acute left eye pain with vision loss OS; ED physician concerned for acute angle-closure glaucoma."
+          placeholder="e.g., MVC with possible chest wall injury, rule out cardiac contusion. Patient presents with chest pain, SOB, and tenderness following MVC with airbag deployment. C-spine precautions maintained."
         />
       </div>
     </div>

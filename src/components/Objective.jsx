@@ -15,7 +15,7 @@ function Objective({ formData, onChange }) {
             id="loc"
             value={formData.loc}
             onChange={(e) => onChange('loc', e.target.value)}
-            placeholder="e.g., pt was aox4"
+            placeholder="e.g., Alert and oriented x4, GCS 15, no loss of consciousness"
           />
         </div>
         <div className="form-field">
@@ -29,7 +29,7 @@ function Objective({ formData, onChange }) {
             id="airway"
             value={formData.airway}
             onChange={(e) => onChange('airway', e.target.value)}
-            placeholder="e.g., PATENT OR OCCLUDED WITH EMESIS"
+            placeholder="e.g., Patent, clear, no obstructions. C-collar in place"
           />
         </div>
         <div className="form-field">
@@ -39,7 +39,7 @@ function Objective({ formData, onChange }) {
             id="breathing"
             value={formData.breathing}
             onChange={(e) => onChange('breathing', e.target.value)}
-            placeholder="e.g., NOTED EQUAL, ADEQUATE, BILATERAL CHEST RISE"
+            placeholder="e.g., Equal, adequate, bilateral chest rise. Slight tachypnea noted, patient reports SOB"
           />
         </div>
         <div className="form-field">
@@ -49,7 +49,7 @@ function Objective({ formData, onChange }) {
             id="circulation"
             value={formData.circulation}
             onChange={(e) => onChange('circulation', e.target.value)}
-            placeholder="e.g., STRONG, REGULAR RADIAL PULSE PRESENT. SKIN WAS WARM, PINK, DRY"
+            placeholder="e.g., Strong, regular radial pulse present bilaterally. Skin warm, pale, diaphoretic. Capillary refill less than 2 seconds"
           />
         </div>
         <div className="form-field">
@@ -59,7 +59,7 @@ function Objective({ formData, onChange }) {
             id="heent"
             value={formData.heent}
             onChange={(e) => onChange('heent', e.target.value)}
-            placeholder="e.g., PERRL AT 5MM OR NOTED CREPITUS TO THE RIGHT ORBITAL REGION"
+            placeholder="e.g., PERRL 4mm bilaterally, equal and reactive. No visual disturbances reported. No raccoon eyes or Battle's sign"
           />
         </div>
         <div className="form-field">
@@ -69,7 +69,7 @@ function Objective({ formData, onChange }) {
             id="neck"
             value={formData.neck}
             onChange={(e) => onChange('neck', e.target.value)}
-            placeholder="e.g., NEGATIVE JVD, TRACHEA MIDLINE"
+            placeholder="e.g., No JVD, trachea midline. C-collar in place. No step-off or crepitus palpated. Tender to palpation midline"
           />
         </div>
         <div className="form-field">
@@ -79,7 +79,7 @@ function Objective({ formData, onChange }) {
             id="chest"
             value={formData.chest}
             onChange={(e) => onChange('chest', e.target.value)}
-            placeholder="e.g., LUNG SOUNDS CLEAR BILATERALLY"
+            placeholder="e.g., Lung sounds clear bilaterally, equal air entry. No wheezes, rales, or rhonchi. Chest wall tender to palpation"
           />
         </div>
         <div className="form-field">
@@ -89,7 +89,7 @@ function Objective({ formData, onChange }) {
             id="upperExtremities"
             value={formData.upperExtremities}
             onChange={(e) => onChange('upperExtremities', e.target.value)}
-            placeholder="e.g., PMS INTACT BILATERALLY"
+            placeholder="e.g., Pulses, motor, and sensation intact bilaterally. Left arm tender to palpation, no obvious deformities. No lacerations or abrasions noted"
           />
         </div>
         <div className="form-field">
@@ -99,7 +99,7 @@ function Objective({ formData, onChange }) {
             id="abdomen"
             value={formData.abdomen}
             onChange={(e) => onChange('abdomen', e.target.value)}
-            placeholder="e.g., ALL QUADRANTS NEGATIVE FOR GRD"
+            placeholder="e.g., Soft, non-tender, non-distended. All quadrants negative for guarding, rigidity, or rebound. No seatbelt sign noted"
           />
         </div>
         <div className="form-field">
@@ -109,7 +109,7 @@ function Objective({ formData, onChange }) {
             id="pelvis"
             value={formData.pelvis}
             onChange={(e) => onChange('pelvis', e.target.value)}
-            placeholder="e.g., NO INCONTINENCE NOTED"
+            placeholder="e.g., Stable, no crepitus, no incontinence. No pelvic instability noted"
           />
         </div>
         <div className="form-field">
@@ -119,7 +119,7 @@ function Objective({ formData, onChange }) {
             id="lowerExtremities"
             value={formData.lowerExtremities}
             onChange={(e) => onChange('lowerExtremities', e.target.value)}
-            placeholder="e.g., PMS INTACT BILATERALLY"
+            placeholder="e.g., Pulses, motor, and sensation intact bilaterally. No edema, no deformities. No pedal pulses checked due to backboard"
           />
         </div>
         <div className="form-field">
@@ -129,7 +129,7 @@ function Objective({ formData, onChange }) {
             id="back"
             value={formData.back}
             onChange={(e) => onChange('back', e.target.value)}
-            placeholder="e.g., NO DCATPBTLS PRESENT"
+            placeholder="e.g., No deformities, contusions, abrasions, penetrations, burns, tenderness, lacerations, or swelling. Patient log-rolled, no step-off palpated"
           />
         </div>
         <div className="form-field">

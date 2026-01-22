@@ -9,7 +9,7 @@ function Plan({ formData, onChange }) {
           value={formData.plan}
           onChange={(e) => onChange('plan', e.target.value)}
           rows="5"
-          placeholder="e.g., Pt referred to ophthamologist upstairs"
+          placeholder="e.g., C-spine cleared by physician, backboard removed. EKG obtained, troponin ordered. Chest X-ray ordered. Continue monitoring vitals. Disposition pending imaging results and cardiac workup."
         />
       </div>
     </div>

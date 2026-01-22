@@ -10,7 +10,7 @@ function Subjective({ formData, onChange }) {
             value={formData.symptoms}
             onChange={(e) => onChange('symptoms', e.target.value)}
             rows="3"
-            placeholder="e.g., pain in / behind left eye, blurry vision, nausea"
+            placeholder="e.g., Chest pain 7/10, shortness of breath, headache, neck pain, left arm pain. Patient states airbag deployed"
           />
         </div>
         <div className="form-field">
@@ -20,7 +20,7 @@ function Subjective({ formData, onChange }) {
             id="allergies"
             value={formData.allergies}
             onChange={(e) => onChange('allergies', e.target.value)}
-            placeholder="e.g., none, penicillin"
+            placeholder="e.g., NKDA, no known allergies"
           />
         </div>
         <div className="form-field">
@@ -30,7 +30,7 @@ function Subjective({ formData, onChange }) {
             id="medications"
             value={formData.medications}
             onChange={(e) => onChange('medications', e.target.value)}
-            placeholder="e.g., insulin"
+            placeholder="e.g., Aspirin 81mg daily, Metoprolol 25mg BID"
           />
         </div>
         <div className="form-field">
@@ -40,7 +40,7 @@ function Subjective({ formData, onChange }) {
             id="pastHistory"
             value={formData.pastHistory}
             onChange={(e) => onChange('pastHistory', e.target.value)}
-            placeholder="e.g., type I diabetic, chronic hypertension"
+            placeholder="e.g., Hypertension, history of anxiety, no prior cardiac events"
           />
         </div>
         <div className="form-field">
@@ -50,7 +50,7 @@ function Subjective({ formData, onChange }) {
             id="lastOral"
             value={formData.lastOral}
             onChange={(e) => onChange('lastOral', e.target.value)}
-            placeholder="e.g., yesterday at dinner time"
+            placeholder="e.g., Last ate lunch at 1200, last drank water at 1300"
           />
         </div>
         <div className="form-field">
@@ -60,7 +60,7 @@ function Subjective({ formData, onChange }) {
             value={formData.events}
             onChange={(e) => onChange('events', e.target.value)}
             rows="2"
-            placeholder="e.g., working"
+            placeholder="e.g., Patient was driver in MVC, rear-ended at approximately 45 mph. Airbag deployed. Patient was wearing seatbelt. No loss of consciousness reported"
           />
         </div>
       </div>
@@ -74,7 +74,7 @@ function Subjective({ formData, onChange }) {
             id="onset"
             value={formData.onset}
             onChange={(e) => onChange('onset', e.target.value)}
-            placeholder="e.g., quick, gradual"
+            placeholder="e.g., Immediate onset at time of impact, approximately 30 minutes ago"
           />
         </div>
         <div className="form-field">
@@ -84,7 +84,7 @@ function Subjective({ formData, onChange }) {
             id="provokes"
             value={formData.provokes}
             onChange={(e) => onChange('provokes', e.target.value)}
-            placeholder="e.g., bright lights make it worse"
+            placeholder="e.g., Worsened with deep breathing and movement. Slightly improved when sitting still"
           />
         </div>
         <div className="form-field">
@@ -94,7 +94,7 @@ function Subjective({ formData, onChange }) {
             id="quality"
             value={formData.quality}
             onChange={(e) => onChange('quality', e.target.value)}
-            placeholder="e.g., feels like screw driver into eye"
+            placeholder="e.g., Sharp, crushing chest pain, pressure sensation"
           />
         </div>
         <div className="form-field">
@@ -104,7 +104,7 @@ function Subjective({ formData, onChange }) {
             id="radiation"
             value={formData.radiation}
             onChange={(e) => onChange('radiation', e.target.value)}
-            placeholder="e.g., dull pain radiating towards left temple"
+            placeholder="e.g., Pain in center of chest, radiates to left arm and jaw"
           />
         </div>
         <div className="form-field">
@@ -116,7 +116,7 @@ function Subjective({ formData, onChange }) {
             onChange={(e) => onChange('severity', e.target.value)}
             min="1"
             max="10"
-            placeholder="e.g., 11/10"
+            placeholder="e.g., 7"
           />
         </div>
         <div className="form-field">
@@ -126,7 +126,7 @@ function Subjective({ formData, onChange }) {
             id="time"
             value={formData.time}
             onChange={(e) => onChange('time', e.target.value)}
-            placeholder="e.g., started at 6pm yesterday, constant since onset"
+            placeholder="e.g., Started at time of impact (1330), constant since onset, no relief"
           />
         </div>
       </div>
@@ -140,7 +140,7 @@ function Subjective({ formData, onChange }) {
             value={formData.generalAssessment}
             onChange={(e) => onChange('generalAssessment', e.target.value)}
             rows="3"
-            placeholder="e.g., Pt found lying on hospital bed in zone 2 sw-5, calm, alert and oriented"
+            placeholder="e.g., 32-year-old female found on backboard with C-collar in place, zone 1, bed 3. Patient appears anxious, diaphoretic, alert and oriented x4, cooperative. Patient arrived via EMS"
           />
         </div>
       </div>

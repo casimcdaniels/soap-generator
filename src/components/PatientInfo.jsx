@@ -48,7 +48,7 @@ function PatientInfo({ formData, onChange }) {
           id="chiefComplaint"
           value={formData.chiefComplaint}
           onChange={(e) => onChange('chiefComplaint', e.target.value)}
-          placeholder="e.g., Left eye pain and sensitivity"
+          placeholder="e.g., MVC, chest pain, possible head injury"
           required
         />
       </div>
