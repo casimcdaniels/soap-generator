@@ -19,7 +19,15 @@ function Vitals({ vitals, onChange }) {
       if (newPulse) vitalParts.push(`P: ${newPulse}`)
       if (newRespRate) vitalParts.push(`RR: ${newRespRate}`)
       if (newBpSystolic && newBpDiastolic) vitalParts.push(`BP: ${newBpSystolic}/${newBpDiastolic}`)
-      if (newTemp) vitalParts.push(`Temp: ${newTemp}°F`)
+      if (newTemp) {
+        const tempF = parseFloat(newTemp);
+        if (!isNaN(tempF)) {
+          const tempC = ((tempF - 32) * 5 / 9).toFixed(1);
+          vitalParts.push(`Temp: ${tempC}°C (${tempF}°F)`);
+        } else {
+          vitalParts.push(`Temp: ${newTemp}°F`);
+        }
+      }
       if (newSpo2) vitalParts.push(`SpO2: ${newSpo2}%`)
       if (newEtco2) vitalParts.push(`ETCO2: ${newEtco2} mmHg`)
       if (newGlucose) vitalParts.push(`Glucose: ${newGlucose} mg/dL`)
