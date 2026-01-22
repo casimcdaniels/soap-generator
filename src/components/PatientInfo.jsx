@@ -1,8 +1,20 @@
+import TimeInput from './TimeInput'
+
 function PatientInfo({ formData, onChange }) {
   return (
     <div className="form-group">
       <h2>Patient Information</h2>
       <div className="form-row">
+        <div className="form-field">
+          <label htmlFor="encounterTime">Time (24-hour, HH:MM)</label>
+          <TimeInput
+            id="encounterTime"
+            value={formData.encounterTime}
+            onChange={(value) => onChange('encounterTime', value)}
+            placeholder="19:15"
+            required
+          />
+        </div>
         <div className="form-field">
           <label htmlFor="age">Age</label>
           <input
@@ -15,7 +27,7 @@ function PatientInfo({ formData, onChange }) {
           />
         </div>
         <div className="form-field">
-          <label htmlFor="gender">Gender</label>
+          <label htmlFor="gender">Sex</label>
           <select
             id="gender"
             value={formData.gender}

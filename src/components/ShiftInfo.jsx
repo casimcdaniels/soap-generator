@@ -49,18 +49,6 @@ function ShiftInfo({ formData, onChange }) {
           />
         </div>
       </div>
-      <div className="form-row">
-        <div className="form-field">
-          <label htmlFor="encounterTime">Encounter Time (24-hour, HH:MM)</label>
-          <TimeInput
-            id="encounterTime"
-            value={formData.encounterTime}
-            onChange={(value) => onChange('encounterTime', value)}
-            placeholder="19:15"
-            required
-          />
-        </div>
-      </div>
     </div>
   )
 }

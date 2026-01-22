@@ -5,13 +5,14 @@ export function formatTime(timeString) {
     return hours + minutes;
 }
 
-// Format date for display (M/D format)
+// Format date for display (full date format MM/DD/YYYY)
 export function formatDate(dateString) {
     if (!dateString) return '';
     const date = new Date(dateString);
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    return `${month}/${day}`;
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
 }
 
 // Format time range
@@ -67,10 +68,19 @@ export function generateReport(formData) {
 
     // Header line
     report += `${shiftType} ${date} ${timeRange}`;
-    report += `\t${encounterTime}`;
-    report += `\t${age}`;
-    report += `\t${gender}`;
-    report += '\n\n';
+    report += '\n';
+    
+    // Patient info below header
+    if (encounterTime) {
+        report += `Time: ${encounterTime}\n`;
+    }
+    if (age) {
+        report += `Age: ${age}\n`;
+    }
+    if (gender) {
+        report += `Sex: ${gender}\n`;
+    }
+    report += '\n';
 
     // SUBJECTIVE Section
     report += '-------- SUBJECTIVE ----------------------------------------\n';
