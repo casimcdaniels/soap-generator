@@ -15,10 +15,10 @@ function PatientInfo({ formData, onChange }) {
                 value={formData.ageYears}
                 onChange={(e) => onChange('ageYears', e.target.value)}
                 min="0"
-                placeholder="Y"
+                placeholder="Years"
                 className="patient-info-input"
               />
-              <span style={{ fontSize: '0.7em', color: '#666', display: 'block', marginTop: '1px' }}>Years</span>
+           
             </div>
             <div style={{ flex: 1 }}>
               <input
@@ -28,10 +28,10 @@ function PatientInfo({ formData, onChange }) {
                 onChange={(e) => onChange('ageMonths', e.target.value)}
                 min="0"
                 max="11"
-                placeholder="M"
+                placeholder="Months"
                 className="patient-info-input"
               />
-              <span style={{ fontSize: '0.7em', color: '#666', display: 'block', marginTop: '1px' }}>Months</span>
+           
             </div>
           </div>
         </div>
