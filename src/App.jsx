@@ -23,6 +23,8 @@ const getDefaultFormData = () => ({
   ageMonths: '',
   weight: '',
   weightUnit: 'lbs',
+  height: '',
+  heightUnit: 'in',
   gender: '',
   chiefComplaint: '',
   symptoms: '',

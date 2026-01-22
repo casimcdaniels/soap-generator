@@ -38,6 +38,8 @@ export function generateReport(formData) {
     const ageMonths = formData.ageMonths || '';
     const weight = formData.weight || '';
     const weightUnit = formData.weightUnit || 'lbs';
+    const height = formData.height || '';
+    const heightUnit = formData.heightUnit || 'in';
     const gender = formData.gender || '';
     
     // Format age display
@@ -68,6 +70,26 @@ export function generateReport(formData) {
             weightDisplay = `${weight} ${weightUnit}`;
         }
     }
+    
+    // Format height display with conversion (always show cm first, then inches)
+    let heightDisplay = '';
+    if (height) {
+        const heightValue = parseFloat(height);
+        if (!isNaN(heightValue)) {
+            let inValue, cmValue;
+            if (heightUnit === 'cm') {
+                cmValue = heightValue.toFixed(1);
+                inValue = (heightValue / 2.54).toFixed(1);
+            } else { // heightUnit === 'in'
+                inValue = heightValue.toFixed(1);
+                cmValue = (heightValue * 2.54).toFixed(1);
+            }
+            heightDisplay = `${cmValue} cm (${inValue} in)`;
+        } else {
+            heightDisplay = `${height} ${heightUnit}`;
+        }
+    }
+    
     const chiefComplaint = formData.chiefComplaint || '';
 
     // SAMPLE History
@@ -123,18 +145,21 @@ export function generateReport(formData) {
     // Patient info below header
     if (encounterTime !== undefined && encounterTime !== null && encounterTime !== '') {
         report += `Time: ${encounterTime}\n`;
-        if (ageDisplay || weightDisplay || gender) {
+        if (ageDisplay || weightDisplay || heightDisplay || gender) {
             report += '\n';
         }
     }
     if (ageDisplay) {
         report += `Age: ${ageDisplay}\n`;
     }
+    if (gender) {
+        report += `Sex: ${gender}\n`;
+    }
     if (weightDisplay) {
         report += `Weight: ${weightDisplay}\n`;
     }
-    if (gender) {
-        report += `Sex: ${gender}\n`;
+    if (heightDisplay) {
+        report += `Height: ${heightDisplay}\n`;
     }
     report += '\n';
 

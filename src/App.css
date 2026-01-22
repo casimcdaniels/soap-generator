@@ -288,6 +288,10 @@ header p {
     max-width: 250px;
 }
 
+.patient-info-height-field {
+    max-width: 250px;
+}
+
 .patient-info-input {
     padding: 10px 14px !important;
     font-size: 0.95rem !important;

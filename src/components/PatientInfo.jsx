@@ -76,6 +76,32 @@ function PatientInfo({ formData, onChange }) {
             </select>
           </div>
         </div>
+        <div className="form-field patient-info-field patient-info-height-field">
+          <label htmlFor="height">Height</label>
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'flex-end' }}>
+            <input
+              type="number"
+              id="height"
+              value={formData.height}
+              onChange={(e) => onChange('height', e.target.value)}
+              min="0"
+              step="0.1"
+              placeholder="Height"
+              style={{ flex: 1 }}
+              className="patient-info-input"
+            />
+            <select
+              id="heightUnit"
+              value={formData.heightUnit}
+              onChange={(e) => onChange('heightUnit', e.target.value)}
+              style={{ width: '70px' }}
+              className="patient-info-input"
+            >
+              <option value="in">in</option>
+              <option value="cm">cm</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   )
