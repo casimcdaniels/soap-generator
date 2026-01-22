@@ -147,17 +147,23 @@ export function generateReport(formData) {
         report += `Chief Complaint: ${chiefComplaint}`;
     }
     
+    // Patient Presentation (General Assessment) - moved to be directly under Chief Complaint
+    if (generalAssessment) {
+        if (chiefComplaint) report += '\n\n';
+        report += generalAssessment;
+    }
+    
     // SAMPLE History
     const sampleParts = [];
     if (symptoms && symptoms.trim()) sampleParts.push(`Signs / Symptoms: ${symptoms}`);
-    if (allergies && allergies.trim() && allergies.trim().toLowerCase() !== 'none') sampleParts.push(`Allergies: ${allergies}`);
+    if (allergies && allergies.trim()) sampleParts.push(`Allergies: ${allergies}`);
     if (medications && medications.trim()) sampleParts.push(`Medications: ${medications}`);
     if (pastHistory && pastHistory.trim()) sampleParts.push(`Pertinent Medical History: ${pastHistory}`);
     if (lastOral && lastOral.trim()) sampleParts.push(`Last: ${lastOral}`);
     if (events && events.trim()) sampleParts.push(`Events: ${events}`);
     
     if (sampleParts.length > 0) {
-        if (chiefComplaint) report += '\n\n';
+        if (chiefComplaint || generalAssessment) report += '\n\n';
         report += sampleParts.join('\n');
     }
     
@@ -171,14 +177,8 @@ export function generateReport(formData) {
     if (time !== undefined && time !== null && time !== '') opqrstParts.push(`Time: ${time}`);
     
     if (opqrstParts.length > 0) {
-        if (chiefComplaint || sampleParts.length > 0) report += '\n\n';
+        if (chiefComplaint || generalAssessment || sampleParts.length > 0) report += '\n\n';
         report += opqrstParts.join('\n');
-    }
-    
-    // General Assessment
-    if (generalAssessment) {
-        if (chiefComplaint || sampleParts.length > 0 || opqrstParts.length > 0) report += '\n\n';
-        report += generalAssessment;
     }
     
     report += '\n\n';
