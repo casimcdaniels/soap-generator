@@ -1,8 +1,11 @@
-// Format time for display (HHMM format)
+// Format time for display (HH:MM format)
 export function formatTime(timeString) {
     if (!timeString) return '';
-    const [hours, minutes] = timeString.split(':');
-    return hours + minutes;
+    const parts = timeString.split(':');
+    const hours = parts[0];
+    const minutes = parts[1];
+    if (!hours || !minutes || minutes === undefined) return '';
+    return `${hours}:${minutes}`;
 }
 
 // Format date for display (full date format MM/DD/YYYY)
@@ -18,7 +21,10 @@ export function formatDate(dateString) {
 // Format time range
 export function formatTimeRange(startTime, endTime) {
     if (!startTime || !endTime) return '';
-    return `${formatTime(startTime)}-${formatTime(endTime)}`;
+    const start = formatTime(startTime);
+    const end = formatTime(endTime);
+    if (!start || !end) return '';
+    return `${start}-${end}`;
 }
 
 // Generate SOAP report
@@ -108,15 +114,18 @@ export function generateReport(formData) {
     let report = '';
 
     // Header line
-    report += `${shiftType} ${date} ${timeRange}`;
+    report += `${shiftType} ${date}`;
+    if (timeRange !== undefined && timeRange !== null && timeRange !== '') {
+        report += ` ${timeRange}`;
+    }
     report += '\n\n';
     
     // Patient info below header
-    if (encounterTime) {
+    if (encounterTime !== undefined && encounterTime !== null && encounterTime !== '') {
         report += `Time: ${encounterTime}\n`;
-    }
-    if (encounterTime && (ageDisplay || weightDisplay || gender)) {
-        report += '\n';
+        if (ageDisplay || weightDisplay || gender) {
+            report += '\n';
+        }
     }
     if (ageDisplay) {
         report += `Age: ${ageDisplay}\n`;
@@ -159,7 +168,7 @@ export function generateReport(formData) {
     if (quality) opqrstParts.push(`Quality: ${quality}`);
     if (radiation) opqrstParts.push(`Radiation: ${radiation}`);
     if (severity) opqrstParts.push(`Severity: ${severity}/10`);
-    if (time) opqrstParts.push(`Time: ${time}`);
+    if (time !== undefined && time !== null && time !== '') opqrstParts.push(`Time: ${time}`);
     
     if (opqrstParts.length > 0) {
         if (chiefComplaint || sampleParts.length > 0) report += '\n\n';
