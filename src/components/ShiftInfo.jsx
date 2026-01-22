@@ -3,7 +3,7 @@ import TimeInput from './TimeInput'
 function ShiftInfo({ formData, onChange }) {
   return (
     <div className="form-group">
-        <h2><i className="fas fa-calendar-check"></i> Shift Information</h2>
+      <h2><i className="fas fa-calendar-check"></i> Encounter</h2>
       <div className="form-row">
         <div className="form-field">
           <label htmlFor="shiftType">Shift Type</label>
@@ -48,6 +48,16 @@ function ShiftInfo({ formData, onChange }) {
             required
           />
         </div>
+      </div>
+      <div className="form-field">
+        <label htmlFor="encounterTime">Encounter Time (24-hour, HH:MM)</label>
+        <TimeInput
+          id="encounterTime"
+          value={formData.encounterTime}
+          onChange={(value) => onChange('encounterTime', value)}
+          placeholder="19:15"
+          required
+        />
       </div>
     </div>
   )

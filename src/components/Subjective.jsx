@@ -2,6 +2,20 @@ function Subjective({ formData, onChange }) {
   return (
     <>
       <div className="form-group">
+        <div className="form-field">
+          <label htmlFor="chiefComplaint">Chief Complaint</label>
+          <input
+            type="text"
+            id="chiefComplaint"
+            value={formData.chiefComplaint}
+            onChange={(e) => onChange('chiefComplaint', e.target.value)}
+            placeholder="e.g., MVC, chest pain, possible head injury"
+            required
+          />
+        </div>
+      </div>
+
+      <div className="form-group">
         <h2><i className="fas fa-history"></i> SAMPLE History</h2>
         <div className="form-field">
           <label htmlFor="symptoms">S - Signs & Symptoms</label>

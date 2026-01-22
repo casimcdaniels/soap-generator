@@ -175,7 +175,7 @@ function App() {
   }
 
   const tabs = [
-    { id: 'shift', label: 'Shift Info', color: '#6c757d', icon: 'fa-calendar-alt' },
+    { id: 'shift', label: 'Encounter', color: '#6c757d', icon: 'fa-calendar-alt' },
     { id: 'patient', label: 'Patient Info', color: '#003d82', icon: 'fa-user' },
     { id: 'subjective', label: 'Subjective', color: '#0066cc', icon: 'fa-comment-medical' },
     { id: 'objective', label: 'Objective', color: '#28a745', icon: 'fa-stethoscope' },
@@ -202,10 +202,10 @@ function App() {
       <div className="main-content">
         <div className="form-section">
           <div className="tabs-container">
-            {tabs.map(tab => (
+            {tabs.map((tab, index) => (
               <button
                 key={tab.id}
-                className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
+                className={`tab-button ${activeTab === tab.id ? 'active' : ''} ${tab.id === 'shift' ? 'tab-encounter' : ''}`}
                 onClick={() => setActiveTab(tab.id)}
                 style={{
                   '--tab-color': tab.color,

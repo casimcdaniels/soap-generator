@@ -77,11 +77,14 @@ export function generateReport(formData) {
 
     // Header line
     report += `${shiftType} ${date} ${timeRange}`;
-    report += '\n';
+    report += '\n\n';
     
     // Patient info below header
     if (encounterTime) {
         report += `Time: ${encounterTime}\n`;
+    }
+    if (encounterTime && (age || gender)) {
+        report += '\n';
     }
     if (age) {
         report += `Age: ${age}\n`;

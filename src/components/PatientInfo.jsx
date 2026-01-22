@@ -6,16 +6,6 @@ function PatientInfo({ formData, onChange }) {
         <h2><i className="fas fa-id-card"></i> Patient Information</h2>
       <div className="form-row">
         <div className="form-field">
-          <label htmlFor="encounterTime">Time (24-hour, HH:MM)</label>
-          <TimeInput
-            id="encounterTime"
-            value={formData.encounterTime}
-            onChange={(value) => onChange('encounterTime', value)}
-            placeholder="19:15"
-            required
-          />
-        </div>
-        <div className="form-field">
           <label htmlFor="age">Age</label>
           <input
             type="number"
@@ -40,17 +30,6 @@ function PatientInfo({ formData, onChange }) {
             <option value="Other">Other</option>
           </select>
         </div>
-      </div>
-      <div className="form-field">
-        <label htmlFor="chiefComplaint">Chief Complaint</label>
-        <input
-          type="text"
-          id="chiefComplaint"
-          value={formData.chiefComplaint}
-          onChange={(e) => onChange('chiefComplaint', e.target.value)}
-          placeholder="e.g., MVC, chest pain, possible head injury"
-          required
-        />
       </div>
     </div>
   )
