@@ -140,6 +140,7 @@ export function generateReport(formData) {
     if (timeRange !== undefined && timeRange !== null && timeRange !== '') {
         report += ` ${timeRange}`;
     }
+    report += '\n------------------------';
     report += '\n\n';
     
     // Patient info below header
