@@ -25,14 +25,14 @@ body {
 header {
     background: #003d82;
     color: white;
-    padding: 15px 20px;
+    padding: 12px 15px;
     text-align: center;
     border-bottom: 4px solid #0066cc;
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.2em;
+    margin-bottom: 6px;
     font-weight: 700;
 }
 
@@ -67,17 +67,17 @@ header p {
 
 .tab-button {
     flex: 1;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border: none;
     background: #f0f0f0;
     color: #666;
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
     white-space: nowrap;
-    min-width: 120px;
+    min-width: 100px;
 }
 
 .tab-button:hover {
@@ -92,13 +92,13 @@ header p {
 }
 
 .tab-content {
-    padding: 15px 20px;
+    padding: 12px 15px;
     flex: 1;
     overflow-y: auto;
 }
 
 .preview-section {
-    padding: 15px 20px;
+    padding: 12px 15px;
     background: white;
     border-left: 2px solid #e0e4e8;
     display: flex;
@@ -109,49 +109,50 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #e0e4e8;
 }
 
 .preview-header h2 {
     color: #003d82;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .form-group {
-    background: white;
-    padding: 12px 15px;
-    margin-bottom: 12px;
-    border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 12px;
+    margin-bottom: 8px;
 }
 
 .form-group h2 {
     color: #003d82;
-    font-size: 1.3em;
-    margin-bottom: 10px;
-    padding-bottom: 6px;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
     border-bottom: 2px solid #0066cc;
 }
 
 .form-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .form-field {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
 }
 
 .form-field label {
     display: block;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     font-weight: 600;
     color: #495057;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .form-field input[type="text"],
@@ -161,10 +162,10 @@ header p {
 .form-field select,
 .form-field textarea {
     width: 100%;
-    padding: 8px;
-    border: 2px solid #dee2e6;
+    padding: 6px 8px;
+    border: 1px solid #dee2e6;
     border-radius: 2px;
-    font-size: 0.95em;
+    font-size: 0.9em;
     font-family: inherit;
     transition: border-color 0.3s ease;
 }
@@ -179,23 +180,24 @@ header p {
 
 .form-field textarea {
     resize: vertical;
-    min-height: 80px;
+    min-height: 70px;
+    line-height: 1.4;
 }
 
 .form-actions {
     display: flex;
-    gap: 10px;
-    margin-top: 20px;
-    padding: 12px 20px;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 15px;
     border-top: 2px solid #e0e4e8;
     background: white;
 }
 
 .btn {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 2px;
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -229,8 +231,8 @@ header p {
 .btn-copy {
     background: #28a745;
     color: white;
-    padding: 8px 16px;
-    font-size: 0.9em;
+    padding: 6px 14px;
+    font-size: 0.85em;
 }
 
 .btn-copy:hover {
@@ -241,12 +243,12 @@ header p {
 #reportPreview {
     flex: 1;
     width: 100%;
-    padding: 12px 15px;
-    border: 2px solid #dee2e6;
+    padding: 10px 12px;
+    border: 1px solid #dee2e6;
     border-radius: 2px;
     font-family: 'Courier New', monospace;
-    font-size: 0.9em;
-    line-height: 1.6;
+    font-size: 0.85em;
+    line-height: 1.5;
     resize: none;
     background: #f8f9fa;
     color: #212529;
